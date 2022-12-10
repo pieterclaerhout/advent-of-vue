@@ -3,13 +3,14 @@ import { ref, watch } from "vue";
 import { useDebounceFn } from "@vueuse/core";
 import { ProductClient } from "../../clients/ProductClient";
 import type { Product } from "../../clients/ProductClient";
+import PageTitle from "../../components/PageTitle.vue";
 
-const searchTerm = ref("");
+const searchTerm = ref<string>("");
 const products = ref<Product[]>([]);
-const loading = ref(false);
-const noResults = ref(false);
+const loading = ref<boolean>(false);
+const noResults = ref<boolean>(false);
 
-const client = new ProductClient();
+const client: ProductClient = new ProductClient();
 
 const findProducts = useDebounceFn(async (term) => {
   noResults.value = false;
@@ -34,7 +35,7 @@ watch(searchTerm, (newTerm) => findProducts(newTerm));
 
 <template>
   <div class="w-full h-full flex flex-col gap-5 justify-center items-center">
-    <h1 class="text-4xl font-bold">Gift Search Bar</h1>
+    <PageTitle>Gift Search Bar</PageTitle>
     <input
       type="text"
       class="p-2 border-2 border-gray-dark"

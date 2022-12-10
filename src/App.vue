@@ -19,7 +19,7 @@ router.getRoutes();
       </RouterLink>
     </nav>
   </header>
-  <main>
+  <main class="w-full h-full flex flex-col gap-5 justify-center items-center">
     <RouterView />
   </main>
 </template>
