@@ -49,5 +49,3 @@ watch(searchTerm, (newTerm) => findProducts(newTerm));
     </ul>
   </div>
 </template>
-
-<style></style>

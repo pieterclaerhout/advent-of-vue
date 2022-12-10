@@ -52,5 +52,3 @@ fetchJoke();
     </button>
   </div>
 </template>
-
-<style></style>
