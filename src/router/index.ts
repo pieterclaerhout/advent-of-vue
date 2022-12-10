@@ -23,6 +23,11 @@ const router = createRouter({
       name: "day3",
       component: () => import("../views/day3/Day3View.vue"),
     },
+    {
+      path: "/day4",
+      name: "day4",
+      component: () => import("../views/day4/Day4View.vue"),
+    },
   ],
 });
 
