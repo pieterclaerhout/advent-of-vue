@@ -1,14 +1,22 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
+import router from "./router";
+
+router.getRoutes();
 </script>
 
 <template>
-  <header>
+  <header class="bg-red-100">
     <h1>Advent of Vue</h1>
 
     <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
+      <RouterLink
+        v-for="route of router.getRoutes()"
+        :key="route.name"
+        :to="route"
+      >
+        {{ route.name }}
+      </RouterLink>
     </nav>
   </header>
   <main>
@@ -38,6 +46,10 @@ header {
 
       &:hover {
         background-color: #eee;
+      }
+
+      &.router-link-active {
+        background-color: #ddd;
       }
     }
   }
