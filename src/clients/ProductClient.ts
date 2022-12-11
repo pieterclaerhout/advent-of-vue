@@ -12,6 +12,11 @@ export interface Product {
 export class ProductClient extends BaseClient {
   protected apiHost: string = "https://dummyjson.com/";
 
+  public async all(): Promise<Product[]> {
+    const resp = await this.fetch("products");
+    return resp.products as Product[];
+  }
+
   public async search(query: string = ""): Promise<Product[]> {
     const resp = await this.fetch("products/search", { q: query });
     return resp.products as Product[];

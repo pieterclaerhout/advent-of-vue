@@ -40,10 +40,10 @@ watch(searchTerm, (newTerm) => findProducts(newTerm));
       type="text"
       class="p-2 border-2 border-gray-dark"
       v-model="searchTerm"
-      placeholder="Start typing..."
+      placeholder="Start typing…"
     />
     <p v-if="noResults">No results found.</p>
-    <p v-if="loading">Loading...</p>
+    <p v-if="loading">Loading…</p>
     <ul v-else class="list-disc">
       <li v-for="product in products" :key="product.id">{{ product.title }}</li>
     </ul>

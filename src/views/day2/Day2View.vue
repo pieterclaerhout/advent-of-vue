@@ -46,7 +46,7 @@ fetchJoke();
       {{ delivery }}
     </TextBubble>
     <button class="bg-green w-full h-10 rounded-lg" @click="handleClick">
-      <span v-if="loading">Loading...</span>
+      <span v-if="loading">Loading…</span>
       <span v-else-if="showDelivery">Another!</span>
       <span v-else>Tell Me!</span>
     </button>
