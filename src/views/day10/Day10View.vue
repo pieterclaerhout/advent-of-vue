@@ -25,7 +25,7 @@ function nextClue(): void {
 
     <AppModal :open="modalOpen">
       <template #title> Clue # 1 </template>
-      <div class="text-left">
+      <div class="text-center">
         <p>I like teaching and coding with Vue.js! 🎉</p>
         <p>
           I also like to style things with

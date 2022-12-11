@@ -12,8 +12,8 @@ const navigationRoutes: (string | undefined)[] = routes
   <header
     class="text-center bg-green-300 border-b-1 border-gray-300 py-4 shadow-md"
   >
-    <RouterLink :to="{ name: 'home' }" class="text-black">
-      <h1 class="text-2xl font-bold mb-4">Advent of Vue</h1>
+    <RouterLink :to="{ name: 'home' }">
+      <h1 class="text-2xl font-bold mb-4 text-black">Advent of Vue</h1>
     </RouterLink>
 
     <nav class="flex flex-row gap-2 justify-center">

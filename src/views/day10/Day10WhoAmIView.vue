@@ -18,6 +18,7 @@ const iAmCorrect = computed<boolean>(() => {
       type="text"
       placeholder="Who am I? (Hint: Daniel)"
       class="mt-4"
+      autofocus
     />
     <transition>
       <div v-if="iAmCorrect" class="text-center">
