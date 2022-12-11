@@ -2,6 +2,7 @@
 import { JokeClient } from "@/clients/JokeClient";
 import type { Joke } from "@/clients/JokeClient";
 import { ref } from "vue";
+import PrimaryButton from "../../components/PrimaryButton.vue";
 import PageTitle from "../../components/PageTitle.vue";
 import TextBubble from "../../components/TextBubble.vue";
 
@@ -38,17 +39,17 @@ fetchJoke();
 
 <template>
   <PageTitle>Gift Search Bar</PageTitle>
-  <div class="w-72 flex flex-col gap-4">
+  <div class="w-96 flex flex-col gap-4">
     <TextBubble isSetup v-if="!loading">
       {{ setup }}
     </TextBubble>
     <TextBubble v-if="showDelivery && !loading">
       {{ delivery }}
     </TextBubble>
-    <button class="bg-green w-full h-10 rounded-lg" @click="handleClick">
+    <primary-button @click="handleClick">
       <span v-if="loading">Loading…</span>
       <span v-else-if="showDelivery">Another!</span>
       <span v-else>Tell Me!</span>
-    </button>
+    </primary-button>
   </div>
 </template>

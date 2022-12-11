@@ -7,13 +7,10 @@ export class BaseClient {
   ): Promise<any> {
     const qs = new URLSearchParams();
     for (const key in params) {
-      qs.set(key, params[key]);
-    }
-    if (qs.entries.length > 0) {
-      url += `?${qs}`;
+      qs.append(key, params[key]);
     }
 
-    const resp = await fetch(`${this.apiHost}${url}`);
+    const resp = await fetch(`${this.apiHost}${url}?${qs}`);
     const result = await resp.json();
     if (!resp.ok) {
       throw new Error(result);

@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import PageTitle from "../../components/PageTitle.vue";
-import GreenButton from "../../components/GreenButton.vue";
+import PrimaryButton from "../../components/PrimaryButton.vue";
 import UsaMap from "../../components/UsaMap.vue";
 
 const router = useRouter();
@@ -38,7 +38,7 @@ function nextClue(): void {
 <template>
   <PageTitle>Welcome to your Secret Santa Clues!</PageTitle>
 
-  <div class="text-center" v-if="!loaded">
+  <div class="text-center w-96" v-if="!loaded">
     <progress
       class="progress w-full progress-primary"
       :value="progress"
@@ -51,6 +51,8 @@ function nextClue(): void {
     <UsaMap />
     <p>I've lived in 5 US states in my lifetime</p>
 
-    <green-button @click.prevent="nextClue">Reveal LAST Clue</green-button>
+    <primary-button @click.prevent="nextClue" class="mt-4"
+      >Reveal LAST Clue</primary-button
+    >
   </div>
 </template>

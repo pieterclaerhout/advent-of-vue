@@ -17,7 +17,7 @@ withDefaults(
       <div
         v-for="i in size"
         :key="i"
-        class="relative rounded-full bg-green w-16 h-16 -m-2 flex justify-center items-center"
+        class="relative rounded-full bg-emerald-500 w-16 h-16 -m-2 flex justify-center items-center"
       />
     </div>
   </div>

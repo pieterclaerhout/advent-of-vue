@@ -11,7 +11,7 @@ defineProps({
       <Transition name="slide-up">
         <span
           :key="number"
-          class="numbers text-green absolute top-0 left-[50%]"
+          class="numbers text-emerald-500 absolute top-0 left-[50%]"
         >
           {{ number }}
         </span>

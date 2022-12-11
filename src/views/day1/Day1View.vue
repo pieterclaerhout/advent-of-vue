@@ -4,6 +4,7 @@ import { useDebounceFn } from "@vueuse/core";
 import { ProductClient } from "../../clients/ProductClient";
 import type { Product } from "../../clients/ProductClient";
 import PageTitle from "../../components/PageTitle.vue";
+import InputField from "../../components/InputField.vue";
 
 const searchTerm = ref<string>("");
 const products = ref<Product[]>([]);
@@ -36,16 +37,22 @@ watch(searchTerm, (newTerm) => findProducts(newTerm));
 <template>
   <div class="w-full h-full flex flex-col gap-5 justify-center items-center">
     <PageTitle>Gift Search Bar</PageTitle>
-    <input
-      type="text"
-      class="p-2 border-2 border-gray-dark"
-      v-model="searchTerm"
-      placeholder="Start typing…"
-    />
-    <p v-if="noResults">No results found.</p>
-    <p v-if="loading">Loading…</p>
-    <ul v-else class="list-disc">
-      <li v-for="product in products" :key="product.id">{{ product.title }}</li>
-    </ul>
+    <div class="w-96">
+      <InputField
+        type="text"
+        autofocus
+        v-model="searchTerm"
+        placeholder="Start typing…"
+      />
+      <div class="mt-4">
+        <p v-if="noResults">No results found.</p>
+        <p v-if="loading">Loading…</p>
+        <ul v-else class="list-disc list-inside ml-2">
+          <li v-for="product in products" :key="product.id">
+            {{ product.title }}
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>

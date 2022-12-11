@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import PageTitle from "../../components/PageTitle.vue";
+import PrimaryButton from "../../components/PrimaryButton.vue";
 import { computed, ref } from "vue";
 import presents from "./presents.json";
 
@@ -48,11 +49,8 @@ const presentsSorted = computed(() =>
         data-qa="present"
       />
     </div>
-    <button
-      class="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg flex items-center justify-center mx-auto mt-8"
-      @click="toggleSort"
-    >
-      Toggle sort
-    </button>
+    <div class="mt-8">
+      <primary-button @click="toggleSort"> Toggle sort </primary-button>
+    </div>
   </div>
 </template>

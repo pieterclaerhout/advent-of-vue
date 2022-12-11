@@ -19,10 +19,11 @@ const iAmCorrect = computed<boolean>(() => {
       v-model="iAmGuess"
       type="text"
       placeholder="Who am I? (Hint: Daniel)"
+      class="mt-4"
     />
     <transition>
       <div v-if="iAmCorrect" class="text-center">
-        <p class="text-primary mt-5">You got it! It's nice to meet you! 👋</p>
+        <p class="text-primary mt-4">You got it! It's nice to meet you! 👋</p>
       </div>
     </transition>
   </div>

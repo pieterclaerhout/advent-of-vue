@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
-import GreenButton from "../../components/GreenButton.vue";
+import PrimaryButton from "../../components/PrimaryButton.vue";
 import PageTitle from "../../components/PageTitle.vue";
 
 const router = useRouter();
@@ -22,16 +22,16 @@ function nextClue(): void {
   <div class="w-96">
     <p>What do you get when you cross a snowman and a Vampire?</p>
 
-    <select v-model="answer" class="p-2 border-2 border-gray-dark w-full">
+    <select v-model="answer" class="p-2 border-2 border-gray-dark w-full mt-4">
       <option value="A Dad Joke">A Dad Joke</option>
       <option value="Frost Bite">Frost Bite</option>
       <option value="I don't know">I don't know</option>
     </select>
 
-    <div class="mt-5">
-      <green-button @click.prevent="nextClue" v-if="correct">
+    <div class="mt-4">
+      <primary-button @click.prevent="nextClue" v-if="correct">
         Correct! Reveal Clue
-      </green-button>
+      </primary-button>
 
       <p class="text-error" v-if="answer && !correct">Wrong! Try again</p>
     </div>

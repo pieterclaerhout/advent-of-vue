@@ -3,7 +3,7 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 import PageTitle from "../../components/PageTitle.vue";
 import AppModal from "../../components/AppModal.vue";
-import GreenButton from "../../components/GreenButton.vue";
+import PrimaryButton from "../../components/PrimaryButton.vue";
 
 const router = useRouter();
 
@@ -20,9 +20,9 @@ function nextClue(): void {
 <template>
   <PageTitle>Welcome to your Secret Santa Clues!</PageTitle>
   <div class="text-center w-96">
-    <green-button @click="modalOpen = true" v-if="!modalOpen">
+    <primary-button @click="modalOpen = true" v-if="!modalOpen">
       Show clue 1
-    </green-button>
+    </primary-button>
 
     <AppModal :open="modalOpen">
       <template #title> Clue # 1 </template>
@@ -38,7 +38,7 @@ function nextClue(): void {
       </div>
 
       <template #actions>
-        <green-button @click.prevent="nextClue">Next clue</green-button>
+        <primary-button @click.prevent="nextClue">Next clue</primary-button>
       </template>
     </AppModal>
   </div>

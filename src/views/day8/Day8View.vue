@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import PageTitle from "../../components/PageTitle.vue";
+import PrimaryButton from "../../components/PrimaryButton.vue";
 import { computed, watch } from "vue";
 import { useCycleList } from "@vueuse/core";
 import { useI18n } from "vue-i18n";
@@ -23,7 +24,7 @@ const days = computed((): number => {
   <section class="flex flex-col items-center leading-loose text-center w-96">
     <i18n-t keypath="christmasIsComing" tag="span" scope="global">
       <template #time>
-        <span class="font-medium text-green-600">
+        <span class="font-medium text-emerald-500">
           {{ t("day", days) }}
         </span>
       </template>
@@ -33,15 +34,10 @@ const days = computed((): number => {
       </template>
     </i18n-t>
 
-    <div class="flex items-center justify-between flex-col w-full">
-      <div>{{ t("language") }}</div>
-      <div class="w-full">
-        <button
-          class="bg-green w-full h-10 rounded-lg px-4"
-          @click="list.next()"
-        >
-          next language
-        </button>
+    <div class="flex items-center justify-between flex-col w-full mt-4">
+      <div class="font-bold">{{ t("language") }}</div>
+      <div class="w-full mt-4">
+        <primary-button @click="list.next()"> Next language </primary-button>
       </div>
     </div>
   </section>
