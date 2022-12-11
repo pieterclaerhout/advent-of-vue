@@ -29,7 +29,7 @@ const interval = setInterval(() => {
 }, 60);
 
 function nextClue(): void {
-  router.push({ name: "_day10-clue3" });
+  router.push({ name: "day10-clue3" });
 }
 </script>
 

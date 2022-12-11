@@ -1,35 +1,28 @@
 <script setup lang="ts">
-import { RouterLink, RouterView, type RouteRecordNormalized } from "vue-router";
-import router from "./router";
+import { RouterLink, RouterView } from "vue-router";
+import { routes } from "./router";
 
-const routes = router.getRoutes();
-
-const isCurrentRoute = (route: RouteRecordNormalized): boolean => {
-  return route.name === router.currentRoute.value.name;
-};
+const navigationRoutes: (string | undefined)[] = routes
+  .map((route) => route.children?.find((child) => child.path === ""))
+  .filter((route) => route !== undefined && route.name !== undefined)
+  .map((route) => route?.name?.toString());
 </script>
 
 <template>
   <header
     class="text-center bg-green-300 border-b-1 border-gray-300 py-4 shadow-md"
   >
-    <RouterLink :to="{ name: '_home' }" class="text-black">
+    <RouterLink :to="{ name: 'home' }" class="text-black">
       <h1 class="text-2xl font-bold mb-4">Advent of Vue</h1>
     </RouterLink>
 
     <nav class="flex flex-row gap-2 justify-center">
-      <template v-for="route of routes" :key="route.name">
+      <template v-for="route of navigationRoutes" :key="route">
         <RouterLink
-          :to="route"
-          v-if="!route.name?.toString().startsWith('_')"
-          class="p-2 hover:bg-green-200 hover:text-black rounded-md"
-          :class="{
-            'bg-green-700': isCurrentRoute(route),
-            'text-white': isCurrentRoute(route),
-            'text-black': !isCurrentRoute(route),
-          }"
+          :to="{ name: route }"
+          class="p-2 hover:bg-green-200 hover:text-black rounded-md text-black"
         >
-          {{ route.name }}
+          {{ route }}
         </RouterLink>
       </template>
     </nav>

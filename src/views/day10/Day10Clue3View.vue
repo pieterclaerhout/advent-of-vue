@@ -10,7 +10,7 @@ const correct = computed<boolean>(() => {
 });
 
 function nextClue(): void {
-  router.push({ name: "_day10-whoami" });
+  router.push({ name: "day10-whoami" });
 }
 </script>
 

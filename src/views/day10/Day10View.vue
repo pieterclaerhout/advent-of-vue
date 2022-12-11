@@ -11,7 +11,7 @@ const modalOpen = ref<boolean>(false);
 function nextClue(): void {
   modalOpen.value = false;
   setTimeout(() => {
-    router.push({ name: "_day10-clue2" });
+    router.push({ name: "day10-clue2" });
   }, 300);
 }
 </script>

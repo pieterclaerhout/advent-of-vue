@@ -1,33 +1,50 @@
-import { createRouter, createWebHistory } from "vue-router";
+import {
+  createRouter,
+  createWebHistory,
+  type RouteRecordRaw,
+} from "vue-router";
 
-const routes = [
+export const routes: RouteRecordRaw[] = [
   {
     path: "/",
-    name: "_home",
+    name: "home",
     component: () => import("../views/HomeView.vue"),
-  },
-  {
-    path: `/day10/clue2`,
-    name: `_day10-clue2`,
-    component: () => import(`../views/day10/Day10Clue2View.vue`),
-  },
-  {
-    path: `/day10/clue3`,
-    name: `_day10-clue3`,
-    component: () => import(`../views/day10/Day10Clue3View.vue`),
-  },
-  {
-    path: `/day10/whoami`,
-    name: `_day10-whoami`,
-    component: () => import(`../views/day10/Day10WhoAmIView.vue`),
+    children: [],
   },
 ];
 
 for (let i = 1; i <= 10; i++) {
+  const children: RouteRecordRaw[] = [
+    {
+      path: "",
+      name: `day${i}`,
+      component: () => import(`../views/day${i}/Day${i}View.vue`),
+    },
+  ];
+  if (i === 10) {
+    children.push(
+      ...[
+        {
+          path: `clue2`,
+          name: `day${i}-clue2`,
+          component: () => import(`../views/day10/Day10Clue2View.vue`),
+        },
+        {
+          path: `clue3`,
+          name: `day${i}-clue3`,
+          component: () => import(`../views/day10/Day10Clue3View.vue`),
+        },
+        {
+          path: `whoami`,
+          name: `day${i}-whoami`,
+          component: () => import(`../views/day10/Day10WhoAmIView.vue`),
+        },
+      ]
+    );
+  }
   routes.push({
     path: `/day${i}`,
-    name: `day${i}`,
-    component: () => import(`../views/day${i}/Day${i}View.vue`),
+    children: children,
   });
 }
 

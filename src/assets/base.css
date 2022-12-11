@@ -12,6 +12,10 @@
   }
 }
 
+.router-link-active {
+  @apply bg-green-700 text-white;
+}
+
 body {
   margin: 0;
   padding: 0;
