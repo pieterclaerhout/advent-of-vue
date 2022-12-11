@@ -1,20 +1,5 @@
-# advent-of-vue
+# Advent of Vue
 
-## Day 1
+My solutions for the [Advent of Vue challenge](https://adventofvue.com/).
 
-## Day 2
-
-## Day 3
-
-## Day 4
-
-## Day 5
-
-## Day 6
-
-## Day 7
-
-## Day 8
-
-## Day 9
-
+I decided the settle on [TypeScript](https://www.typescript.com/), [Vue 3](https://vuejs.org/) (using the composition API) and [TailwindCSS](https://tailwindcss.com/).
