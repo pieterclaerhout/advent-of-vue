@@ -1,10 +1,7 @@
 <script lang="ts" setup>
 import { ref, watch } from "vue";
 import { useDebounceFn } from "@vueuse/core";
-import { ProductClient } from "../../clients/ProductClient";
-import type { Product } from "../../clients/ProductClient";
-import PageTitle from "../../components/PageTitle.vue";
-import InputField from "../../components/InputField.vue";
+import { ProductClient, type Product } from "../../clients/ProductClient";
 
 const searchTerm = ref<string>("");
 const products = ref<Product[]>([]);

@@ -1,7 +1,5 @@
 <script lang="ts" setup>
 import { ref, computed } from "vue";
-import PageTitle from "../../components/PageTitle.vue";
-import InputField from "../../components/InputField.vue";
 
 const iAmGuess = ref<string>("");
 const iAmCorrect = computed<boolean>(() => {

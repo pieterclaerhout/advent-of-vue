@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { computed } from "vue";
 import CountdownSegment from "../../components/CountdownSegment.vue";
-import PageTitle from "../../components/PageTitle.vue";
 import { useNow } from "@vueuse/core";
 
 const now = useNow();

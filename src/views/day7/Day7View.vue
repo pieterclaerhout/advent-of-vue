@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import PageTitle from "../../components/PageTitle.vue";
 import ChristmasPresent from "../../components/ChristmasPresent.vue";
 import ChristmasTreeWithPresents from "../../components/ChristmasTreeWithPresents.vue";
 import { ref } from "vue";

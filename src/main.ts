@@ -3,6 +3,10 @@ import App from "./App.vue";
 import router from "./router";
 import { createI18n } from "vue-i18n";
 import messages from "@intlify/unplugin-vue-i18n/messages";
+import PageTitle from "./components/PageTitle.vue";
+import PrimaryButton from "./components/PrimaryButton.vue";
+import InputField from "./components/InputField.vue";
+import ExternalLink from "./components/ExternalLink.vue";
 
 import "./assets/base.css";
 
@@ -55,6 +59,11 @@ const i18n = createI18n({
 });
 
 const app = createApp(App);
+
+app.component("PageTitle", PageTitle);
+app.component("PrimaryButton", PrimaryButton);
+app.component("InputField", InputField);
+app.component("ExternalLink", ExternalLink);
 
 app.use(router);
 app.use(i18n);

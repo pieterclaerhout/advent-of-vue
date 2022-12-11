@@ -1,9 +1,8 @@
 <script lang="ts" setup>
+import ExternalLink from "@/components/ExternalLink.vue";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import PageTitle from "../../components/PageTitle.vue";
 import AppModal from "../../components/AppModal.vue";
-import PrimaryButton from "../../components/PrimaryButton.vue";
 
 const router = useRouter();
 
@@ -30,10 +29,13 @@ function nextClue(): void {
         <p>I like teaching and coding with Vue.js! 🎉</p>
         <p>
           I also like to style things with
-          <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>
+          <ExternalLink href="https://tailwindcss.com/" target="_blank">
+            Tailwind CSS
+          </ExternalLink>
           and
-          <a href="https://daisyui.com/" target="_blank">Daisy UI</a> (used in
-          creating this site)
+          <ExternalLink href="https://daisyui.com/" target="_blank">
+            Daisy UI
+          </ExternalLink>
         </p>
       </div>
 

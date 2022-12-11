@@ -1,9 +1,6 @@
 <script lang="ts" setup>
-import { JokeClient } from "@/clients/JokeClient";
-import type { Joke } from "@/clients/JokeClient";
 import { ref } from "vue";
-import PrimaryButton from "../../components/PrimaryButton.vue";
-import PageTitle from "../../components/PageTitle.vue";
+import { JokeClient, type Joke } from "@/clients/JokeClient";
 import TextBubble from "../../components/TextBubble.vue";
 
 const loading = ref<boolean>(false);

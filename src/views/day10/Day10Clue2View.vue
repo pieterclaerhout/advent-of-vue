@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import PageTitle from "../../components/PageTitle.vue";
-import PrimaryButton from "../../components/PrimaryButton.vue";
 import UsaMap from "../../components/UsaMap.vue";
 
 const router = useRouter();

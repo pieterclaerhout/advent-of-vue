@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import PageTitle from "../../components/PageTitle.vue";
-import PrimaryButton from "../../components/PrimaryButton.vue";
 import { computed, ref } from "vue";
 import presents from "./presents.json";
 

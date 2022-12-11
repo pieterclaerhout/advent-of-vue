@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import PageTitle from "../../components/PageTitle.vue";
-import PrimaryButton from "../../components/PrimaryButton.vue";
 import { computed, watch } from "vue";
 import { useCycleList } from "@vueuse/core";
 import { useI18n } from "vue-i18n";

@@ -13,7 +13,7 @@ const isCurrentRoute = (route: RouteRecordNormalized): boolean => {
   <header
     class="text-center bg-green-300 border-b-1 border-gray-300 py-4 shadow-md"
   >
-    <RouterLink :to="{ name: '_home' }">
+    <RouterLink :to="{ name: '_home' }" class="text-black">
       <h1 class="text-2xl font-bold mb-4">Advent of Vue</h1>
     </RouterLink>
 
@@ -22,10 +22,11 @@ const isCurrentRoute = (route: RouteRecordNormalized): boolean => {
         <RouterLink
           :to="route"
           v-if="!route.name?.toString().startsWith('_')"
-          class="p-2 hover:bg-green-200 hover:text-black"
+          class="p-2 hover:bg-green-200 hover:text-black rounded-md"
           :class="{
             'bg-green-700': isCurrentRoute(route),
             'text-white': isCurrentRoute(route),
+            'text-black': !isCurrentRoute(route),
           }"
         >
           {{ route.name }}

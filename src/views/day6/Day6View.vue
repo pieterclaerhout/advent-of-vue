@@ -3,7 +3,6 @@ import { onMounted } from "vue";
 import ItemSelect from "../../components/ItemSelect.vue";
 import ComparisonSummary from "../../components/ComparisonSummary.vue";
 import { useItemComparison } from "../../composables/itemComparison";
-import PageTitle from "../../components/PageTitle.vue";
 import { ProductClient } from "../../clients/ProductClient";
 
 const { isFetchingItems, availableItems, itemsToCompare } = useItemComparison();
