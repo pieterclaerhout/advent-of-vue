@@ -32,24 +32,22 @@ watch(searchTerm, (newTerm) => findProducts(newTerm));
 </script>
 
 <template>
-  <div class="w-full h-full flex flex-col gap-5 justify-center items-center">
-    <PageTitle>Gift Search Bar</PageTitle>
-    <div class="w-96">
-      <InputField
-        type="text"
-        autofocus
-        v-model="searchTerm"
-        placeholder="Start typing…"
-      />
-      <div class="mt-4">
-        <p v-if="noResults">No results found.</p>
-        <p v-if="loading">Loading…</p>
-        <ul v-else class="list-disc list-inside ml-2">
-          <li v-for="product in products" :key="product.id">
-            {{ product.title }}
-          </li>
-        </ul>
-      </div>
+  <PageTitle>Gift Search Bar</PageTitle>
+  <div class="max-w-xl w-full">
+    <InputField
+      type="text"
+      autofocus
+      v-model="searchTerm"
+      placeholder="Start typing…"
+    />
+    <div class="mt-4">
+      <p v-if="noResults">No results found.</p>
+      <p v-if="loading">Loading…</p>
+      <ul v-else class="list-disc list-inside ml-2">
+        <li v-for="product in products" :key="product.id">
+          {{ product.title }}
+        </li>
+      </ul>
     </div>
   </div>
 </template>

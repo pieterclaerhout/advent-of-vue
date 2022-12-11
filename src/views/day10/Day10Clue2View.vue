@@ -36,7 +36,7 @@ function nextClue(): void {
 <template>
   <PageTitle>Welcome to your Secret Santa Clues!</PageTitle>
 
-  <div class="text-center w-96" v-if="!loaded">
+  <div class="text-center max-w-xl w-full" v-if="!loaded">
     <progress
       class="progress w-full progress-primary"
       :value="progress"

@@ -22,7 +22,7 @@ onMounted(async () => {
 
 <template>
   <PageTitle>Select Items to Compare</PageTitle>
-  <div class="flex flex-col gap-5 justify-center">
+  <div class="max-w-xl w-full flex flex-col gap-5 justify-center">
     <ItemSelect />
     <ItemSelect />
   </div>

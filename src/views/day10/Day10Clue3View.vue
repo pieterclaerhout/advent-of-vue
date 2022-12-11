@@ -17,7 +17,7 @@ function nextClue(): void {
 <template>
   <PageTitle>But First You must Answer a Riddle</PageTitle>
 
-  <div class="w-96">
+  <div class="max-w-xl w-full">
     <p>What do you get when you cross a snowman and a Vampire?</p>
 
     <select v-model="answer" class="p-2 border-2 border-gray-dark w-full mt-4">

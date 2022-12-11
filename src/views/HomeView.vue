@@ -3,7 +3,7 @@ import ExternalLink from "@/components/ExternalLink.vue";
 </script>
 
 <template>
-  <main class="w-96 text-center">
+  <main class="max-w-xl w-full text-center">
     <PageTitle>About this</PageTitle>
     <p>
       My solutions for the

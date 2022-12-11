@@ -11,7 +11,7 @@ const iAmCorrect = computed<boolean>(() => {
 <template>
   <PageTitle>I'm the lead instructor at Vue School.</PageTitle>
 
-  <div class="w-96">
+  <div class="max-w-xl w-full">
     <p class="text-center">I'm the lead instructor at Vue School.</p>
     <InputField
       v-model="iAmGuess"

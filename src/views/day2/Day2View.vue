@@ -36,7 +36,7 @@ fetchJoke();
 
 <template>
   <PageTitle>Gift Search Bar</PageTitle>
-  <div class="w-96 flex flex-col gap-4">
+  <div class="max-w-xl w-full flex flex-col gap-4">
     <TextBubble isSetup v-if="!loading">
       {{ setup }}
     </TextBubble>

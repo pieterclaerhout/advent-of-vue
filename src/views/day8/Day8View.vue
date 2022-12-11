@@ -19,7 +19,9 @@ const days = computed((): number => {
 
 <template>
   <PageTitle>{{ t("happyHolidays") }}</PageTitle>
-  <section class="flex flex-col items-center leading-loose text-center w-96">
+  <section
+    class="flex flex-col items-center leading-loose text-center max-w-xl w-full"
+  >
     <i18n-t keypath="christmasIsComing" tag="span" scope="global">
       <template #time>
         <span class="font-medium text-emerald-500">

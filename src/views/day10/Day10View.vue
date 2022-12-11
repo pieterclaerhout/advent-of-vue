@@ -18,7 +18,7 @@ function nextClue(): void {
 
 <template>
   <PageTitle>Welcome to your Secret Santa Clues!</PageTitle>
-  <div class="text-center w-96">
+  <div class="text-center max-w-xl w-full">
     <primary-button @click="modalOpen = true" v-if="!modalOpen">
       Show clue 1
     </primary-button>
