@@ -20,7 +20,7 @@ const days = computed((): number => {
 
 <template>
   <PageTitle>{{ t("happyHolidays") }}</PageTitle>
-  <section class="flex flex-col items-center leading-loose text-center">
+  <section class="flex flex-col items-center leading-loose text-center w-96">
     <i18n-t keypath="christmasIsComing" tag="span" scope="global">
       <template #time>
         <span class="font-medium text-green-600">
@@ -33,10 +33,15 @@ const days = computed((): number => {
       </template>
     </i18n-t>
 
-    <div class="flex items-center justify-between w-200px flex-col">
+    <div class="flex items-center justify-between flex-col w-full">
       <div>{{ t("language") }}</div>
-      <div>
-        <button class="icon-button" @click="list.next()">next language</button>
+      <div class="w-full">
+        <button
+          class="bg-green w-full h-10 rounded-lg px-4"
+          @click="list.next()"
+        >
+          next language
+        </button>
       </div>
     </div>
   </section>

@@ -37,7 +37,7 @@ const presentsSorted = computed(() =>
   <PageTitle>Drag the presents under the tree!</PageTitle>
   <div class="max-w-md">
     <div>
-      <img src="/assets/day9/tree.svg" alt="Christmas tree" />
+      <img src="/assets/day9/tree.svg?url" alt="Christmas tree" />
     </div>
     <div class="mt-2 flex justify-center items-center">
       <img

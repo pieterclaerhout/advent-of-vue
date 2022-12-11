@@ -6,6 +6,21 @@ const routes = [
     name: "home",
     component: () => import("../views/HomeView.vue"),
   },
+  {
+    path: `/day10/clue2`,
+    name: `_day10-clue2`,
+    component: () => import(`../views/day10/Day10Clue2View.vue`),
+  },
+  {
+    path: `/day10/clue3`,
+    name: `_day10-clue3`,
+    component: () => import(`../views/day10/Day10Clue3View.vue`),
+  },
+  {
+    path: `/day10/whoami`,
+    name: `_day10-whoami`,
+    component: () => import(`../views/day10/Day10WhoAmIView.vue`),
+  },
 ];
 
 for (let i = 1; i <= 10; i++) {
