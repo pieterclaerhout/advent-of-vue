@@ -8,7 +8,7 @@ const routes = [
   },
 ];
 
-for (let i = 1; i <= 6; i++) {
+for (let i = 1; i <= 7; i++) {
   routes.push({
     path: `/day${i}`,
     name: `day${i}`,

@@ -6,8 +6,8 @@ router.getRoutes();
 </script>
 
 <template>
-  <header class="bg-red-100">
-    <h1>Advent of Vue</h1>
+  <header>
+    <h1 class="text-4xl font-bold mb-4">Advent of Vue</h1>
 
     <nav>
       <RouterLink
