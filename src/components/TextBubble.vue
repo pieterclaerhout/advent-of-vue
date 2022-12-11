@@ -1,16 +1,18 @@
 <script lang="ts" setup>
-defineProps({
-  isSetup: {
-    type: Boolean,
-    default: false,
-  },
-});
+withDefaults(
+  defineProps<{
+    isSetup: boolean;
+  }>(),
+  {
+    isSetup: false,
+  }
+);
 </script>
 
 <template>
   <p
     :class="isSetup ? 'self-start bg-teal-800' : 'self-end bg-red-800'"
-    class="w-56 px-4 py-2 text-white rounded-md shadow-md"
+    class="px-4 py-2 text-white rounded-md shadow-md"
   >
     <slot />
   </p>

@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-defineProps({
-  label: String,
-  number: Number,
-});
+defineProps<{
+  label: string;
+  number: number;
+}>();
 </script>
 
 <template>
@@ -10,7 +10,7 @@ defineProps({
     <div class="pt-10 overflow-hidden relative">
       <Transition name="slide-up">
         <span
-          :key="number"
+          :key="label"
           class="numbers text-emerald-500 absolute top-0 left-[50%]"
         >
           {{ number }}

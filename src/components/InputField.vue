@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import { onMounted, ref } from "vue";
 
-const props = defineProps({
-  modelValue: String,
-  autofocus: Boolean,
-});
+const props = defineProps<{
+  modelValue: string;
+  autofocus: boolean;
+}>();
 
 const emit = defineEmits(["update:modelValue"]);
 
