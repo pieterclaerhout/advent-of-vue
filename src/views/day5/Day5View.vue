@@ -14,7 +14,7 @@ const from = ref<string>("");
       <div
         class="border-2 rounded flex flex-col md:flex-row md:items-center md:gap-8 p-4"
       >
-        <img src="/assets/santa.svg" alt="" class="max-w-[12em]" />
+        <img src="/assets/santa.svg?url" alt="" class="max-w-[12em]" />
         <div>
           <h1 class="font-serif text-4xl">Happy Holidays!</h1>
           <div class="mt-4 bg-white text-black p-2 rounded">TO: {{ to }}</div>
