@@ -16,7 +16,7 @@ const navigationRoutes: (string | undefined)[] = routes
       <h1 class="text-2xl font-bold mb-4 text-black">Advent of Vue</h1>
     </RouterLink>
 
-    <nav class="flex flex-row gap-2 justify-center">
+    <nav class="flex flex-row gap-2 justify-center flex-wrap">
       <template v-for="route of navigationRoutes" :key="route">
         <RouterLink
           :to="{ name: route }"
