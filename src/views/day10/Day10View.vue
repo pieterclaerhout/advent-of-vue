@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import ExternalLink from "@/components/ExternalLink.vue";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import AppModal from "../../components/AppModal.vue";

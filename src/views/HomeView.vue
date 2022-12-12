@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import ExternalLink from "@/components/ExternalLink.vue";
-</script>
-
 <template>
   <main class="max-w-xl w-full text-center">
     <PageTitle>About this</PageTitle>
