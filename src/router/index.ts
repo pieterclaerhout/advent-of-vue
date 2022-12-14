@@ -53,4 +53,9 @@ const router = createRouter({
   routes: routes,
 });
 
+export const navigationRoutes: (string | undefined)[] = routes
+  .map((route) => route.children?.find((child) => child.path === ""))
+  .filter((route) => route !== undefined && route.name !== undefined)
+  .map((route) => route?.name?.toString());
+
 export default router;

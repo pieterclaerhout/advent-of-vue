@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
-import { routes } from "./router";
-
-const navigationRoutes: (string | undefined)[] = routes
-  .map((route) => route.children?.find((child) => child.path === ""))
-  .filter((route) => route !== undefined && route.name !== undefined)
-  .map((route) => route?.name?.toString());
+import { navigationRoutes } from "./router";
 </script>
 
 <template>
