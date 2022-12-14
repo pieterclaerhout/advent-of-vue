@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { toRefs, ref, computed, watch } from "vue";
+import { ref, computed, watch } from "vue";
 
 const props = defineProps({ numGifts: Number });
-const { numGifts } = toRefs(props);
+const numGifts = ref(props.numGifts);
 const currentStep = ref<number>(1);
 
 const eliminationOrder = computed<number[]>(() => {
