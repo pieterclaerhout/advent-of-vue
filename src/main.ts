@@ -1,4 +1,6 @@
 import { createApp } from "vue";
+import { createPinia } from "pinia";
+
 import App from "./App.vue";
 import router from "./router";
 import { createI18n } from "vue-i18n";
@@ -7,6 +9,8 @@ import PageTitle from "./components/PageTitle.vue";
 import PrimaryButton from "./components/PrimaryButton.vue";
 import InputField from "./components/InputField.vue";
 import ExternalLink from "./components/ExternalLink.vue";
+
+const pinia = createPinia();
 
 import "./assets/base.css";
 
@@ -67,5 +71,6 @@ app.component("ExternalLink", ExternalLink);
 
 app.use(router);
 app.use(i18n);
+app.use(pinia);
 
 app.mount("#app");
