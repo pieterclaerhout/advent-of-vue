@@ -13,7 +13,7 @@ export const routes: RouteRecordRaw[] = [
   },
 ];
 
-for (let i = 1; i <= 15; i++) {
+for (let i = 1; i <= 16; i++) {
   const children: RouteRecordRaw[] = [
     {
       path: "",
