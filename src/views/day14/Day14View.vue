@@ -6,9 +6,12 @@ import SecretSantaList from "./components/SecretSantaList.vue";
 import { useList } from "./stores/secret-santa";
 import { matchPeople } from "./helpers/match.js";
 import demoData from "./helpers/demo-data";
+import type { ListItem } from "./types/ListItem";
+
 const store = useList();
 store.init(demoData);
-const secretSantaList = ref([]);
+
+const secretSantaList = ref<ListItem[]>([]);
 const generateList = () => (secretSantaList.value = matchPeople(store.list));
 </script>
 

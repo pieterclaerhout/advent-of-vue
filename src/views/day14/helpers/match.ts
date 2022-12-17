@@ -1,19 +1,23 @@
-export const hasDuplicateInArray = (arr) => {
+import type { Person } from "../types/Person";
+import type { ListItem } from "../types/ListItem";
+
+export const hasDuplicateInArray = (arr: string[]): boolean => {
   return new Set(arr).size !== arr.length;
 };
 
-export const hasDuplicates = (list) => {
-  const nameList = list.map((person) => person.name);
-  const emailList = list.map((person) => person.email);
-  return hasDuplicates(nameList) || hasDuplicates(emailList);
+export const hasDuplicates = (list: Person[]): boolean => {
+  const nameList: string[] = list.map((person: Person) => person.name);
+  const emailList: string[] = list.map((person: Person) => person.email);
+  return hasDuplicateInArray(nameList) || hasDuplicateInArray(emailList);
 };
 
-export const matchPeople = (people) => {
+export const matchPeople = (people: Person[]): ListItem[] => {
   let pool = [...people];
   pool = pool.sort(() => 0.5 - Math.random());
-  let secretSantaList = [];
-  people.forEach((person) => {
-    const secretSanta = pool.find(
+
+  const secretSantaList: ListItem[] = [];
+  people.forEach((person: Person) => {
+    const secretSanta: Person | undefined = pool.find(
       (poolPerson) => poolPerson.email !== person.email
     );
 
@@ -28,9 +32,11 @@ export const matchPeople = (people) => {
       // The last person left in the pool is the giver themselve!
       // In this case, we swap them out with the last successfully assigned pair.
       const lastSecretSanta = secretSantaList[0];
-      const newSecretSantaIndex = secretSantaList.findIndex((lastPerson) => {
-        return lastPerson.email !== lastSecretSanta.giver.email;
-      });
+      const newSecretSantaIndex = secretSantaList.findIndex(
+        (lastPerson: ListItem) => {
+          return lastPerson.email !== lastSecretSanta.giver.email;
+        }
+      );
       secretSantaList.push({
         receiver: person,
         giver: secretSantaList[newSecretSantaIndex].giver,
