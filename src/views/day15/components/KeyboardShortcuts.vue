@@ -19,7 +19,7 @@ onKeyStroke("i", (e) => {
 });
 </script>
 <template>
-  <div class="absolute right-5" ref="el">
+  <div ref="el" class="absolute right-5">
     <button ref="button" class="absolute right-0" @click="open = !open">
       <IconInfo />
     </button>

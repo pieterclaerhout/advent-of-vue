@@ -21,8 +21,8 @@ function isPlaying(song: Song) {
       v-for="song in songs"
       :key="song.slug"
       :song="song"
-      :isSelected="isSelected(song)"
-      :isPlaying="isPlaying(song)"
+      :is-selected="isSelected(song)"
+      :is-playing="isPlaying(song)"
       @click="play(song)"
     />
   </ul>

@@ -36,7 +36,7 @@ function nextClue(): void {
 <template>
   <PageTitle>Welcome to your Secret Santa Clues!</PageTitle>
 
-  <div class="text-center max-w-xl w-full" v-if="!loaded">
+  <div v-if="!loaded" class="text-center max-w-xl w-full">
     <progress
       class="progress w-full progress-primary"
       :value="progress"
@@ -49,7 +49,7 @@ function nextClue(): void {
     <UsaMap />
     <p>I've lived in 5 US states in my lifetime</p>
 
-    <primary-button @click.prevent="nextClue" class="mt-4"
+    <primary-button class="mt-4" @click.prevent="nextClue"
       >Reveal LAST Clue</primary-button
     >
   </div>

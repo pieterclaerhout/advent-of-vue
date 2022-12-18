@@ -35,9 +35,9 @@ watch(searchTerm, (newTerm) => findProducts(newTerm));
   <PageTitle>Gift Search Bar</PageTitle>
   <div class="max-w-xl w-full">
     <InputField
+      v-model="searchTerm"
       type="text"
       autofocus
-      v-model="searchTerm"
       placeholder="Start typing…"
     />
     <div class="mt-4">

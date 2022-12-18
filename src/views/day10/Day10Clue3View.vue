@@ -29,11 +29,11 @@ function nextClue(): void {
     </select>
 
     <div class="mt-4">
-      <primary-button @click.prevent="nextClue" v-if="correct">
+      <primary-button v-if="correct" @click.prevent="nextClue">
         Correct! Reveal Clue
       </primary-button>
 
-      <p class="text-error" v-if="answer && !correct">Wrong! Try again</p>
+      <p v-if="answer && !correct" class="text-error">Wrong! Try again</p>
     </div>
   </div>
 </template>

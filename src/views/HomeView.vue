@@ -30,7 +30,7 @@ import { navigationRoutes } from "../router";
       <HomeTile
         v-for="route of navigationRoutes"
         :key="route"
-        :routeName="route"
+        :route-name="route"
       >
         {{ route }}
       </HomeTile>

@@ -10,8 +10,8 @@ defineProps<{
 
 <template>
   <div>
-    <TallRedGift class="w-32" v-if="name === 'tall-red-gift'" />
-    <SmallRedGift class="w-32" v-else-if="name === 'small-red-gift'" />
-    <BlueGift class="w-32" v-else-if="name === 'blue-gift'" />
+    <TallRedGift v-if="name === 'tall-red-gift'" class="w-32" />
+    <SmallRedGift v-else-if="name === 'small-red-gift'" class="w-32" />
+    <BlueGift v-else-if="name === 'blue-gift'" class="w-32" />
   </div>
 </template>

@@ -27,48 +27,48 @@ const volumneGradient = computed(() => {
       :style="`width: ${progress}%;`"
     ></div>
     <div class="flex sm:justify-center items-center">
-      <button class="pl-5" @click="prev()" title="Previous Song">
+      <button class="pl-5" title="Previous Song" @click="prev()">
         <IconChevronLeft />
       </button>
 
-      <button @click="rewind()" title="Rewind">
+      <button title="Rewind" @click="rewind()">
         <IconBackward />
       </button>
 
       <button
-        @click="playing ? pause() : play()"
         class="bg-emerald-500 rounded-full w-12 h-12 scale-150 mx-5"
         :title="playing ? 'Pause' : 'Play'"
+        @click="playing ? pause() : play()"
       >
         <Transition>
           <IconPause
+            v-if="playing"
             class="absolute top-[50%] left-[50%]"
             style="transform: translate(-50%, -50%)"
-            v-if="playing"
           />
           <IconPlay
+            v-else
             class="absolute top-[50%] left-[50%]"
             style="transform: translate(-50%, -50%)"
-            v-else
           />
         </Transition>
       </button>
 
-      <button @click="ff()" title="Fast Forward">
+      <button title="Fast Forward" @click="ff()">
         <IconForward />
       </button>
-      <button @click="next()" title="Next Song">
+      <button title="Next Song" @click="next()">
         <IconChevronRight />
       </button>
     </div>
     <input
       :value="volume * 100"
-      @input="
-        volume = parseFloat(($event.target as HTMLInputElement).value) / 100
-      "
       class="absolute right-5 w-24 top-[50%]"
       style="transform: translateY(-50%)"
       type="range"
+      @input="
+        volume = parseFloat(($event.target as HTMLInputElement).value) / 100
+      "
     />
     <div
       class="hidden sm:block absolute left-5 w-24 top-[50%] whitespace-nowrap"

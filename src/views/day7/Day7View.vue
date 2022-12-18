@@ -35,20 +35,20 @@ const onDrop = (evt: DragEvent) => {
 <template>
   <PageTitle>Drag the presents under the tree!</PageTitle>
   <ChristmasTreeWithPresents
-    @drop="onDrop"
     :presents="underTheTree"
+    class="mt-16"
+    @drop="onDrop"
     @dragover.prevent
     @dragenter.prevent
-    class="mt-16"
   />
   <div class="pt-32 mt-32 bg-gray-100 w-full justify-center flex-1">
-    <div class="flex items-end justify-center" v-auto-animate>
+    <div v-auto-animate class="flex items-end justify-center">
       <ChristmasPresent
         v-for="(p, index) in presents"
         :key="p"
-        @dragstart="startDrag($event, `${index}`)"
         draggable="true"
         :name="p"
+        @dragstart="startDrag($event, `${index}`)"
       />
     </div>
   </div>

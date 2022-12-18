@@ -34,7 +34,7 @@ const addPerson = () => {
 </script>
 
 <template>
-  <form @submit.prevent="addPerson" class="flex w-full">
+  <form class="flex w-full" @submit.prevent="addPerson">
     <input
       ref="nameField"
       v-model="name"
