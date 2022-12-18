@@ -13,6 +13,7 @@ import ExternalLink from "./components/ExternalLink.vue";
 const pinia = createPinia();
 
 import "./assets/base.css";
+import PageSubTitleVue from "./components/PageSubTitle.vue";
 
 const i18n = createI18n({
   locale: "en",
@@ -65,6 +66,7 @@ const i18n = createI18n({
 const app = createApp(App);
 
 app.component("PageTitle", PageTitle);
+app.component("PageSubTitle", PageSubTitleVue);
 app.component("PrimaryButton", PrimaryButton);
 app.component("InputField", InputField);
 app.component("ExternalLink", ExternalLink);
